@@ -233,7 +233,7 @@ T validateInput(T &value)
 			system("cls");
 			printMenu();
 			cerr << endl << "Please enter a valid item for the tree." << endl;
-        	cout << endl << ">> value: ";
+        	        cout << endl << ">> value: ";
 		}
 	}
 	return value;
