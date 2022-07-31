@@ -38,12 +38,12 @@ class RBNode
 				   parent(NULL), color(RED){}
 					  
 	RBNode(K key, V value): data(key), name(value), left(NULL), 
-							right(NULL), parent(NULL), color(RED){}
+				right(NULL), parent(NULL), color(RED){}
 	
 	
 	bool IsOnLeft() {  return this == parent->left;  }
 	bool HasRedChild() { return (left != NULL && left->color == RED) ||
-								(right != NULL && right->color == RED);	}
+				    (right != NULL && right->color == RED);}
 	RBNode<K, V> *GetSibling();
 	
 	friend class RBTree<K, V>;
@@ -55,9 +55,9 @@ template <class K, class V>
 class RBTree
 {
 public:
-	RBTree(): root(NULL), cursor(NULL){}
+    RBTree(): root(NULL), cursor(NULL){}
 	
-	void Insert(K key, V value);
+    void Insert(K key, V value);
     bool Search(const K key); 
     void Delete(const K key); 
     void ClearTree();
@@ -66,7 +66,7 @@ public:
     void InOrder();
     void PreOrder();
     void PostOrder();
-	void PrintCursor(); 
+    void PrintCursor(); 
  
 private:
 	RBNode<K, V>* root;
